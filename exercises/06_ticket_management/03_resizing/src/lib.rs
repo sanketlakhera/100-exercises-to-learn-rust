@@ -12,6 +12,10 @@ mod tests {
         // Can you guess what the new capacity will be?
         // Beware that the standard library makes no guarantees about the
         // algorithm used to resize the vector, so this may change in the future.
-        assert_eq!(v.capacity(), todo!());
+        assert_eq!(v.capacity(), 4);
+        /// In Rust, when a Vec needs to increase its capacity, it typically doubles
+        /// the current capacity to amortize the cost of reallocations over many
+        /// insertions. This is why you observe the capacity increasing to 4 when
+        /// you push a third element into a Vec with an initial capacity of 2.
     }
 }
